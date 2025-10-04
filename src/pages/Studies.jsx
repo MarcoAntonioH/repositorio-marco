@@ -95,7 +95,7 @@ export default function Studies() {
           className="p-6 bg-white shadow-md rounded-xl hover:shadow-lg transition-shadow"
           whileHover={{ scale: 1.02 }}
         >
-          <h3 className="text-xl font-semibold">Ingeniería de Software</h3>
+          <h3 className="text-xl font-semibold">Ingeniería de Sistemas</h3>
           <p className="text-gray-500">UTP | convalidación – II CICLO</p>
         </motion.div>
       </motion.div>
