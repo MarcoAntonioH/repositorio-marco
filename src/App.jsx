@@ -11,10 +11,10 @@ export default function App() {
 
   return (
     <div className="overflow-x-hidden">
-      {/* Pasamos el setter al Navbar */}
+    
       <Navbar open={menuOpen} setOpen={setMenuOpen} />
 
-      {/* 🔹 Este contenedor se moverá */}
+      
       <div
         className={`transition-transform duration-300 ${
           menuOpen ? "translate-x-64" : ""
@@ -23,13 +23,15 @@ export default function App() {
         <Home />
 
         <section
-  id="projects"
-  className="w-full min-h-screen bg-gray-200 flex items-center justify-center"
->
-  <Projects />
-</section>
+          id="services"
+          className="w-full  bg-gray-100 flex items-center justify-center"
+        >
+          <Services />
+        </section>
 
-        {/* ✅ Aquí usamos el componente Studies */}
+        
+
+       
         <section
           id="studies"
           className="w-full  min-h-screen bg-gray-300 flex items-center justify-center"
@@ -37,12 +39,14 @@ export default function App() {
           <Studies />
         </section>
 
+      
+
         <section
-          id="services"
-          className="w-full  bg-gray-100 flex items-center justify-center"
-        >
-          <Services />
-        </section>
+  id="projects"
+  className="w-full min-h-screen bg-gray-200 flex items-center justify-center"
+>
+  <Projects />
+</section>
       </div>
     </div>
   );

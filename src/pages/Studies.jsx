@@ -37,7 +37,7 @@ export default function Studies() {
 
   const [current, setCurrent] = useState(0);
 
-  // Auto-slide solo en desktop
+  
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrent((prev) => (prev + 1) % experiences.length);
@@ -58,7 +58,7 @@ export default function Studies() {
       transition={{ duration: 0.8 }}
       viewport={{ once: true }}
     >
-      {/* ==================== Estudios ==================== */}
+      
       <motion.div
         className="w-full lg:w-1/2 flex flex-col gap-6"
         initial={{ x: -80, opacity: 0 }}
@@ -100,7 +100,7 @@ export default function Studies() {
         </motion.div>
       </motion.div>
 
-      {/* ==================== Experiencia Laboral ==================== */}
+     
       <motion.div
         className="w-full lg:w-1/2 flex flex-col gap-4"
         initial={{ x: 80, opacity: 0 }}
@@ -112,7 +112,7 @@ export default function Studies() {
           Experiencia Laboral
         </h2>
 
-        {/* -------- Desktop: carrusel clásico -------- */}
+        
         <div className="hidden lg:flex flex-col gap-4">
           <AnimatePresence mode="wait">
             <motion.div
@@ -162,7 +162,6 @@ export default function Studies() {
           </div>
         </div>
 
-        {/* -------- Mobile: scroll horizontal -------- */}
         <div className="flex lg:hidden overflow-x-auto snap-x snap-mandatory gap-4 scrollbar-hide">
           {experiences.map((exp, idx) => (
             <motion.div

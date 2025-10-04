@@ -3,7 +3,7 @@ import { Link } from "react-scroll";
 export default function HamburgerMenu({ open, setOpen, links }) {
   return (
     <div
-  className={`fixed top-0 left-0 h-full w-69 bg-teal-500 text-white font-bold transform
+  className={`fixed top-0 left-0 h-full w-69 bg-teal-800 text-white font-bold transform
     ${open ? "translate-x-0" : "-translate-x-full"}
     transition-transform duration-300 ease-in-out z-40`}
 >
@@ -23,7 +23,7 @@ export default function HamburgerMenu({ open, setOpen, links }) {
             smooth={true}
             duration={500}
             offset={-70}
-            className="cursor-pointer hover:text-gray-800 font-bold"
+            className="text-md cursor-pointer hover:text-gray-300 font-bold hover:underline hover:decoration-2 hover:underline-offset-4 transition-all"
             onClick={() => setOpen(false)}
           >
             {link.name}
@@ -32,13 +32,13 @@ export default function HamburgerMenu({ open, setOpen, links }) {
       ))}
     </ul>
 
-    {/* Datos de contacto */}
+    
     <div className="mt-8 border-t border-black/20 pt-4 text-sm space-y-2">
       <p>📞 +51 955248849</p>
       <p>📧 marcohuaman2604@gmail.com</p>
       <p>📍 Santa Anita, Perú</p>
 
-      {/* Botones de GitHub y LinkedIn */}
+      
       <div className="flex flex-col gap-2 mt-2">
         <a
           href="https://github.com/MarcoAntonioH"
