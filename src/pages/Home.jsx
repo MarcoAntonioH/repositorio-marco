@@ -15,9 +15,7 @@ function AnimatedNumber({ value }) {
   }, [value, count]);
 
   return (
-    <motion.span
-      className="drop-shadow-lg text-transparent bg-clip-text bg-gradient-to-r from-teal-500 to-cyan-400"
-    >
+    <motion.span className="drop-shadow-lg text-transparent bg-clip-text bg-gradient-to-r from-teal-500 to-cyan-400">
       {rounded}
     </motion.span>
   );
@@ -29,7 +27,7 @@ export default function Home() {
       id="home"
       className="relative min-h-screen flex flex-col items-center justify-center bg-white px-8 pt-24 text-center"
     >
-    
+      {/* Presentación */}
       <motion.div
         initial={{ y: -100, opacity: 0, scale: 0.8 }}
         animate={{ y: 0, opacity: 1, scale: 1 }}
@@ -48,6 +46,7 @@ export default function Home() {
           </motion.span>{" "}
           👋
         </h1>
+
         <motion.p
           className="text-xl text-gray-700 leading-relaxed"
           initial={{ opacity: 0 }}
@@ -61,6 +60,7 @@ export default function Home() {
           Conocimientos en React, C# y PHP.  
           <span className="font-medium"> Proactivo</span> y en constante aprendizaje.
         </motion.p>
+
         <motion.p
           className="text-gray-600 italic"
           animate={{ opacity: [0, 1, 0.7, 1] }}
@@ -68,14 +68,54 @@ export default function Home() {
         >
           ✨ Transformando ideas en experiencias digitales.
         </motion.p>
+
+        {/* Botones sociales con imágenes */}
+        <motion.div
+          className="flex justify-center gap-5 mt-3"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 1, duration: 0.8 }}
+        >
+          {/* GitHub */}
+          <motion.a
+            href="https://github.com/MarcoAntonioH"
+            target="_blank"
+            rel="noopener noreferrer"
+            whileHover={{ scale: 1.2, rotate: [0, 5, -5, 0] }}
+            whileTap={{ scale: 0.9 }}
+            className="transition-transform"
+          >
+            <img
+              src="https://res.cloudinary.com/djijf0myw/image/upload/v1758337155/GitHub_Invertocat_Logo.svg_dpzzdu.png"
+              alt="GitHub"
+              className="w-14 h-14 md:w-16 md:h-16 drop-shadow-md hover:drop-shadow-lg"
+            />
+          </motion.a>
+
+          {/* LinkedIn */}
+          <motion.a
+            href="https://www.linkedin.com/in/marco-huaman-garamende-27289b35a/"
+            target="_blank"
+            rel="noopener noreferrer"
+            whileHover={{ scale: 1.2, rotate: [0, -5, 5, 0] }}
+            whileTap={{ scale: 0.9 }}
+            className="transition-transform"
+          >
+            <img
+              src="https://res.cloudinary.com/djijf0myw/image/upload/v1758337156/linkedin-redes-contacto_q2ar9p.png"
+              alt="LinkedIn"
+              className="w-14 h-14 md:w-16 md:h-16 drop-shadow-md hover:drop-shadow-lg"
+            />
+          </motion.a>
+        </motion.div>
       </motion.div>
 
-      
+      {/* Números animados */}
       <motion.div
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, delay: 0.5 }}
-        className="relative z-10 flex gap-12 justify-center items-center mt-12"
+        className="relative z-10 flex gap-12 justify-center items-center mt-8"
       >
         <motion.div whileHover={{ scale: 1.1 }} className="text-center">
           <p className="text-5xl font-extrabold">
@@ -83,6 +123,7 @@ export default function Home() {
           </p>
           <p className="text-gray-700 font-medium">Años de experiencia</p>
         </motion.div>
+
         <motion.div whileHover={{ scale: 1.1 }} className="text-center">
           <p className="text-5xl font-extrabold">
             <AnimatedNumber value={4} />+
@@ -91,16 +132,14 @@ export default function Home() {
         </motion.div>
       </motion.div>
 
-      
+      {/* Tecnologías */}
       <motion.div
         initial={{ y: 80, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 1, delay: 0.8 }}
-        className="relative z-10 mt-16 max-w-5xl"
+        className="relative z-10 mt-10 max-w-5xl"
       >
-        <h2 className="text-3xl font-bold text-gray-800 mb-8">
-          🚀 Tecnologías
-        </h2>
+        <h2 className="text-3xl font-bold text-gray-800 mb-8">🚀 Tecnologías</h2>
         <motion.div
           className="flex flex-wrap gap-10 justify-center"
           initial="hidden"

@@ -11,7 +11,7 @@ export default function Navbar({ open, setOpen }) {
   ];
 
   return (
-    <nav className="fixed top- w-full bg-teal-600 text-white flex items-center justify-between px-10 py-6 shadow-md z-[9999]">
+    <nav className="fixed top- w-full bg-teal-600 text-white flex items-center justify-between px-8 py-4 shadow-md z-[9999]">
       <div className="flex items-center gap-5">
         <button
           onClick={() => setOpen(!open)}
